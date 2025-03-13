@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const JobListing = ({ job }) => {
   return (
@@ -20,12 +21,12 @@ const JobListing = ({ job }) => {
             <i className="fa-solid fa-location-dot text-lg"></i>
             {job.location}
           </div>
-          <a
-            href="job.html"
+          <Link
+            to={`/jobs/${job.id}`}
             className="h-[36px] bg-indigo-500 hover:bg-indigo-600 text-white px-4 py-2 rounded-lg text-center text-sm"
           >
             Read More
-          </a>
+          </Link>
         </div>
       </div>
     </div>
